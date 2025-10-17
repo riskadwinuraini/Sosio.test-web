@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Logout","As a user I am able to successfully logout","SUCCESS","2025-10-17T15:04:08.030239+07:00[Asia/Jakarta]","0.0","22.53"
+"Periode Management","Change/delete a period that is in progress","FAILURE","2025-10-17T15:07:34.2057257+07:00[Asia/Jakarta]","0.0","28.79"

@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="feature_profile_management.html">Profile Management</a></span>
+                > <span class="truncate-60"><a
+                    href="profile_management_edit_account_email_with_a_new_valid_email_chrome_comma_windows.html">Edit account email with a new valid email </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="requirement_type_feature.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 17-10-2025 15:10</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Profile Management </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As a logged in user<br />
+I want to view and edit my account profile<br />
+So that I can update my personal information
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="tag_profile.html">Profile
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="context_chrome.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="context_windows.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="context_chrome_c__windows.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="error-color">Edit account email with a new valid email
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">No such element exception: Expected condition failed: waiting for By.xpath: //div[contains(text(),'Berhasil') or contains(text(),'Email berhasil') or contains(text(),'sukses')] to be displayed (tried for 5 second(s) with 100 milliseconds interval)Build info: version: '4.8.1', revision: '8ebccac989'System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'Driver info: driver.version: unknown</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.NoSuchElementException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>starter.Sosio.Profile.validateSuccessMessageAfterEmailChange(Profile.java:148)<br />starter.StepDefinitions.ProfileSteps.iCanSeeASuccessMessageAfterUpdatingEmail(ProfileSteps.java:78)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:56)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:330)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:51)<br /></pre>
+                    </div>
+
+                    <h4>
+                        Caused by: org.openqa.selenium.TimeoutException
+                    </h4>
+                    <div>
+                            <pre>Expected condition failed: waiting for By.xpath: //div[contains(text(),'Berhasil') or contains(text(),'Email berhasil') or contains(text(),'sukses')] to be displayed (tried for 5 second(s) with 100 milliseconds interval)<br>Build info: version: '4.8.1', revision: '8ebccac989'<br>System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'<br>Driver info: driver.version: unknown</pre>
+                        <pre>starter.Sosio.Profile.validateSuccessMessageAfterEmailChange(Profile.java :148)<br />starter.StepDefinitions.ProfileSteps.iCanSeeASuccessMessageAfterUpdatingEmail(ProfileSteps.java :78)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java :66)<br />io.cucumber.java.Invoker.invoke(Invoker.java :24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java :47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java :29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java :66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java :63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java :84)<br />io.cucumber.core.runner.TestStep.run(TestStep.java :56)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java :51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java :84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java :75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java :130)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java :23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java :130)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java :137)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java :330)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java :51)<br /></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource9823199221152663173.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="3a634d2d097495a1147da683cd9930e882c4b299208ef791d1184b71a5cc4fdb.png" title=" Given I am on the login pages" width="1479"/>
+                <img src="3a634d2d097495a1147da683cd9930e882c4b299208ef791d1184b71a5cc4fdb.png" title=" Validate on login page" width="1479"/>
+                <img src="b60d2bf764a5d6679490360c32a5eada05aa872cf16fa6988ff8ea8d0bdd1146.png" title=" Validate on login page (completed)" width="1479"/>
+                <img src="b60d2bf764a5d6679490360c32a5eada05aa872cf16fa6988ff8ea8d0bdd1146.png" title=" Given I am on the login pages (completed)" width="1479"/>
+                <img src="843e4d79812826414efb8ea0aeb0df4798c51cec484c0854b821023de290f0ae.png" title=" When I enter Email &quot;riskadwi583@gmail.com&quot;" width="1479"/>
+                <img src="843e4d79812826414efb8ea0aeb0df4798c51cec484c0854b821023de290f0ae.png" title=" Input email: riskadwi583@gmail.com" width="1479"/>
+                <img src="843e4d79812826414efb8ea0aeb0df4798c51cec484c0854b821023de290f0ae.png" title=" When I enter Email &quot;riskadwi583@gmail.com&quot; (completed)" width="1479"/>
+                <img src="e5f310075ab10563070fe5db6c28e835512664abdc1f50bc1c702c3df9374d6f.png" title=" And I enter Password &quot;Sosio@123&quot;" width="1479"/>
+                <img src="e5f310075ab10563070fe5db6c28e835512664abdc1f50bc1c702c3df9374d6f.png" title=" Input password: Sosio@123" width="1479"/>
+                <img src="e5f310075ab10563070fe5db6c28e835512664abdc1f50bc1c702c3df9374d6f.png" title=" And I enter Password &quot;Sosio@123&quot; (completed)" width="1479"/>
+                <img src="12019f1a0045ea482a97312a40657176cbe832e1978c9759d1879b8d156bb215.png" title=" And I click Login button" width="1479"/>
+                <img src="12019f1a0045ea482a97312a40657176cbe832e1978c9759d1879b8d156bb215.png" title=" Click login button" width="1479"/>
+                <img src="12019f1a0045ea482a97312a40657176cbe832e1978c9759d1879b8d156bb215.png" title=" And I click Login button (completed)" width="1479"/>
+                <img src="9b0a360e27ad636ead8788f5dcfe455beb39bc95b26a14aa4b3c7149d913c381.png" title=" Then I am on the dashboard page" width="1479"/>
+                <img src="258c2537bba97b4cc9a77bfb7b665f7cd860e35b119e3f0016c64e8a5d3c5deb.png" title=" When I click the profile icon" width="1479"/>
+                <img src="258c2537bba97b4cc9a77bfb7b665f7cd860e35b119e3f0016c64e8a5d3c5deb.png" title=" Click profile icon" width="1479"/>
+                <img src="ba8b6de58779b7cf64be4fb63f76fdb314a7b5fcd8c28896a5be47916d8d83b1.png" title=" Click profile icon (completed)" width="1479"/>
+                <img src="ba8b6de58779b7cf64be4fb63f76fdb314a7b5fcd8c28896a5be47916d8d83b1.png" title=" When I click the profile icon (completed)" width="1479"/>
+                <img src="d6bfddf897db59d1c8efc5841eebcb33c2b1117875b4a8ca683b5a0168f92927.png" title=" And I click the ubah email menu" width="1479"/>
+                <img src="d6bfddf897db59d1c8efc5841eebcb33c2b1117875b4a8ca683b5a0168f92927.png" title=" Click Ubah Email menu" width="1479"/>
+                <img src="422cf152dc5eb0aa496ff8cd1ee770a0904e34330e86f54fdad42c292004a566.png" title=" Click Ubah Email menu (completed)" width="1479"/>
+                <img src="422cf152dc5eb0aa496ff8cd1ee770a0904e34330e86f54fdad42c292004a566.png" title=" And I click the ubah email menu (completed)" width="1479"/>
+                <img src="cedbd16708c5f61da9208639c913a9c95167e6a6f3ed12f566efbff069c58d11.png" title=" And I change the email to &quot;reynandatrikusumadewi@gmail.com&quot;" width="1479"/>
+                <img src="cedbd16708c5f61da9208639c913a9c95167e6a6f3ed12f566efbff069c58d11.png" title=" Change email to reynandatrikusumadewi@gmail.com" width="1479"/>
+                <img src="24145f1531228008d03bd904a051a7dc0a78feee012a8c399f3cbf729f25d728.png" title=" Change email to reynandatrikusumadewi@gmail.com (completed)" width="1479"/>
+                <img src="24145f1531228008d03bd904a051a7dc0a78feee012a8c399f3cbf729f25d728.png" title=" And I change the email to &quot;reynandatrikusumadewi@gmail.com&quot; (completed)" width="1479"/>
+                <img src="688e5cd1cc26f8b4effa6998a3cde3e0cba330efe9b0265a18591f1c00b8a6bd.png" title=" And I click the send button" width="1479"/>
+                <img src="08af99cde2cca0e335643f7f9f515c5ea1b0f089ea06e6a094c299ecc6962aa9.png" title=" Then I am redirected to the OTP verification page" width="1479"/>
+                <img src="08af99cde2cca0e335643f7f9f515c5ea1b0f089ea06e6a094c299ecc6962aa9.png" title=" Validate on OTP verification page" width="1479"/>
+                <img src="3563eb9b56e65dd4450798cf22baeed7a4d5975bba17bb555f8d2e47b80145cf.png" title=" Validate on OTP verification page (completed)" width="1479"/>
+                <img src="3563eb9b56e65dd4450798cf22baeed7a4d5975bba17bb555f8d2e47b80145cf.png" title=" Then I am redirected to the OTP verification page (completed)" width="1479"/>
+                <img src="1ad518f4ffa39581970213c03c4d14015d7e8fe5a6ba40fb0e7e019077fd3b3d.png" title=" When I input the OTP code manually" width="1479"/>
+                <img src="011a0183f065a549fad5aaa6ccd7e517a331fbab91e81fc6415e8e4dea97c783.png" title=" And I click the verify button" width="1479"/>
+                <img src="011a0183f065a549fad5aaa6ccd7e517a331fbab91e81fc6415e8e4dea97c783.png" title=" Then I can see a success message after updating email" width="1479"/>
+                <img src="6beb9b591a875db5f65cbab09009c1f968aacc8903933a27405ec23fd522faa6.png" title=" Validate success message after email change" width="1479"/>
+                <img src="7fcca987c1f48061584db1f59de386613a9dc38f92bf1f369d218dc016cf1fda.png" title=" Validate success message after email change (completed): <span class='error-color'>ERROR</span>" width="1479"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.6.21</span>
+</div>
+</body>
+</html>

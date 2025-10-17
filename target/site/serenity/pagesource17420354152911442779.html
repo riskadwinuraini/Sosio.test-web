@@ -1,0 +1,102 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html lang="en"&gt;<br/>
+ &lt;head&gt; <br/>
+  &lt;meta charset="UTF-8"&gt; <br/>
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; <br/>
+  &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt; <br/>
+  &lt;title&gt;Sosio Apps | MASUK&lt;/title&gt; <br/>
+  &lt;link rel="icon" type="image/x-icon" href="https://demo.sosioapps.co.id/assets/img/brand/favicon.ico"&gt; &lt;!-- Bootstrap css --&gt; <br/>
+  &lt;link href="https://demo.sosioapps.co.id/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"&gt; &lt;!-- Fontawesome --&gt; <br/>
+  &lt;link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"&gt; &lt;!-- style css --&gt; <br/>
+  &lt;link href="https://demo.sosioapps.co.id/assets/css/style.min.css" rel="stylesheet"&gt; <br/>
+  &lt;style&gt;<br/>
+        .passwordIndikator {<br/>
+            position: absolute;<br/>
+            right: 0;<br/>
+            top: 50%;<br/>
+            transform: translateY(-50%);<br/>
+            height: 100%;<br/>
+            width: 50px;<br/>
+            display: flex;<br/>
+            justify-content: center;<br/>
+            align-items: center;<br/>
+            z-index: 99;<br/>
+        }<br/>
+        .floating {<br/>
+            position: fixed; /* Use fixed positioning for consistent placement */<br/>
+            bottom: 24px; /* Distance from the bottom of the viewport */<br/>
+            right: 24px !important; /* Distance from the right of the viewport */<br/>
+            z-index: 9999; /* Ensure it stays on top of other elements */<br/>
+        }<br/>
+<br/>
+        .floating button {<br/>
+            border: none;<br/>
+            background-color: #25d366; /* Optional: Add background color for better visibility */<br/>
+            padding: 10px 15px; /* Add padding for a better look */<br/>
+            border-radius: 50px; /* Optional: Make it more rounded */<br/>
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better contrast */<br/>
+        }<br/>
+<br/>
+        .floating svg {<br/>
+            color: black;<br/>
+        }<br/>
+    &lt;/style&gt; <br/>
+ &lt;/head&gt; <br/>
+ &lt;body&gt; <br/>
+  &lt;div class="page"&gt; <br/>
+   &lt;div class="container-fluid"&gt; <br/>
+    &lt;div class="row bg-white justify-content-center no-gutter"&gt; &lt;!-- The content half --&gt; <br/>
+     &lt;div class="col-md-6 col-lg-6 col-xl-5 bg-white"&gt; <br/>
+      &lt;div class="login d-flex align-items-center py-2"&gt; &lt;!-- Demo content--&gt; <br/>
+       &lt;div class="container p-0"&gt; <br/>
+        &lt;div class="row"&gt; <br/>
+         &lt;div class="col-md-10 col-lg-10 col-xl-9 mx-auto"&gt; <br/>
+          &lt;div class="card-sigin"&gt; <br/>
+           &lt;div class="mb-5 d-flex justify-content-center"&gt; <br/>
+            &lt;img src="https://demo.sosioapps.co.id/assets/img/brand/logo-login.webp" class="sign-favicon-a ht-50" alt="logo"&gt; <br/>
+            &lt;img src="https://demo.sosioapps.co.id/assets/img/brand/logo-login.webp" class="sign-favicon-b<br/>
+                                                    ht-40" alt="logo"&gt; <br/>
+           &lt;/div&gt; <br/>
+           &lt;div class="card-sigin"&gt; <br/>
+            &lt;div class="main-signup-header"&gt; <br/>
+             &lt;h2 style="color: #3557BC"&gt;Selamat datang kembali!&lt;/h2&gt; <br/>
+             &lt;h5 class="fw-semibold mb-4"&gt;Silahkan masuk untuk melanjutkan&lt;/h5&gt; <br/>
+             &lt;form action="https://demo.sosioapps.co.id/login" method="POST"&gt; <br/>
+              &lt;input type="hidden" name="_token" value="SmYbu6xVFNR2p1SVAx0mXZaLp09QNJ6QzixnFUeK" autocomplete="off"&gt; <br/>
+              &lt;div class="form-group"&gt; &lt;label&gt;Email&lt;/label&gt; <br/>
+               &lt;input value="" required name="email" class="form-control" placeholder="Email" type="email" autofocus&gt; <br/>
+              &lt;/div&gt; <br/>
+              &lt;div class="form-group"&gt; &lt;label&gt;Kata Sandi&lt;/label&gt; <br/>
+               &lt;div class="input-group position-relative"&gt; <br/>
+                &lt;input name="password" required class="form-control" placeholder="Kata Sandi" type="password"&gt; &lt;span class="passwordIndikator"&gt; &lt;i class="fa fa-eye"&gt;&lt;/i&gt;&lt;/span&gt; <br/>
+               &lt;/div&gt; <br/>
+              &lt;/div&gt; &lt;button style="background: #3557BC" type="submit" class="btn btn-main-primary btn-block"&gt;Masuk&lt;/button&gt; <br/>
+             &lt;/form&gt; <br/>
+             &lt;div class="main-signin-footer mt-3"&gt; <br/>
+              &lt;p&gt;&lt;a href="/forgot-password" style="color: #a5a0b1;"&gt;Lupa kata sandi?&lt;/a&gt; &lt;/p&gt; <br/>
+             &lt;/div&gt; <br/>
+            &lt;/div&gt; <br/>
+           &lt;/div&gt; <br/>
+          &lt;/div&gt; <br/>
+         &lt;/div&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt;&lt;!-- End --&gt; <br/>
+      &lt;/div&gt; <br/>
+     &lt;/div&gt;&lt;!-- End --&gt; <br/>
+    &lt;/div&gt; <br/>
+    &lt;div class="floating"&gt; &lt;a href="https://api.whatsapp.com/send/?phone=%2B6285179656695&amp;text=Hallo+saya+ingin+bertanya+&amp;type=phone_number&amp;app_absent=0" target="_blank"&gt; &lt;button class="btn custom-button border-0 rounded-pill"&gt; &lt;span class="text-dark"&gt; &lt;img src="https://demo.sosioapps.co.id/assets/img/whatsapp.png" width="60" height="60" alt="call center"&gt; &lt;/span&gt; &lt;/button&gt; &lt;/a&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/div&gt; <br/>
+  &lt;script src="https://demo.sosioapps.co.id/assets/plugins/jquery/jquery.min.js"&gt;&lt;/script&gt; <br/>
+  &lt;script&gt;<br/>
+        $(".passwordIndikator").click(function() {<br/>
+            const password = $(this).parent().parent().find("[name=password]");<br/>
+            if ($(password).attr("type") == "password") {<br/>
+                $(password).attr("type", "text");<br/>
+            } else {<br/>
+                $(password).attr("type", "password");<br/>
+            }<br/>
+        })<br/>
+    &lt;/script&gt; <br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>

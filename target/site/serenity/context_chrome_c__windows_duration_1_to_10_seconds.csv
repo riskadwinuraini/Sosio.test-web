@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"login","As user I have be able to failed login with invalid password","SUCCESS","2025-10-17T15:03:40.7244645+07:00[Asia/Jakarta]","0.0","7.84"
+"login","As user I have be able to failed login with password not filled","SUCCESS","2025-10-17T15:03:49.2743317+07:00[Asia/Jakarta]","0.0","7.48"
+"login","As user I have be able to failed login with email not filled","SUCCESS","2025-10-17T15:03:57.4203269+07:00[Asia/Jakarta]","0.0","4.85"
+"login","As user I have be able to failed login with email and password not filled","SUCCESS","2025-10-17T15:04:02.6741268+07:00[Asia/Jakarta]","0.0","4.95"

@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Periode Management","Continue a period that is paused","FAILURE","2025-10-17T15:08:03.8602329+07:00[Asia/Jakarta]","0.0","35.76"
+"Profile Management","Edit password with a new valid password","ERROR","2025-10-17T15:12:42.3855312+07:00[Asia/Jakarta]","0.0","47.88"
