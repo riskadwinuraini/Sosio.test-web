@@ -1,0 +1,410 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="feature_stakeholder.html">Stakeholder</a></span>
+                > <span class="truncate-60"><a
+                    href="stakeholder_make_a_submission_to_add_stakeholders_chrome_comma_windows.html">make a submission to add stakeholders </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="requirement_type_feature.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 06-11-2025 15:44</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Stakeholder </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As a logged in user<br />
+I want to add a new stakeholder<br />
+So that I can manage stakeholder data in the system
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="context_chrome.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="context_windows.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="tag_addstakeholder.html">Add Stakeholder
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="context_chrome_c__windows.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="error-color">make a submission to add stakeholders
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Element click intercepted exception: element click intercepted: Element (a id='wizard3-t-4' href='#wizard3-h-4' aria-controls='wizard3-p-4')...(/a) is not clickable at point (910, 19). Other element would receive the click: (li class='dropdown main-profile-menu nav nav-item nav-link')...(/li)</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.ElementClickInterceptedException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>starter.Sosio.Stakeholder.clickHubunganPerusahaanTab(Stakeholder.java:244)<br />starter.StepDefinitions.StakeholderSteps.clickHubunganPerusahaanTab(StakeholderSteps.java:165)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:56)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:330)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:51)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource5755109378383086305.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="3a634d2d097495a1147da683cd9930e882c4b299208ef791d1184b71a5cc4fdb.png" title=" Given I am on the login pages" width="1479"/>
+                <img src="3a634d2d097495a1147da683cd9930e882c4b299208ef791d1184b71a5cc4fdb.png" title=" Validate on login page" width="1479"/>
+                <img src="b60d2bf764a5d6679490360c32a5eada05aa872cf16fa6988ff8ea8d0bdd1146.png" title=" Validate on login page (completed)" width="1479"/>
+                <img src="b60d2bf764a5d6679490360c32a5eada05aa872cf16fa6988ff8ea8d0bdd1146.png" title=" Given I am on the login pages (completed)" width="1479"/>
+                <img src="3a634d2d097495a1147da683cd9930e882c4b299208ef791d1184b71a5cc4fdb.png" title=" When I enter Email &quot;riska.dnuraini@solusimakmur.com&quot;" width="1479"/>
+                <img src="3a634d2d097495a1147da683cd9930e882c4b299208ef791d1184b71a5cc4fdb.png" title=" Input email: riska.dnuraini@solusimakmur.com" width="1479"/>
+                <img src="344bca32c0bab5ad1a9a22f54a5a59d1bdf62ba95e6027ab037433b87298f021.png" title=" Input email: riska.dnuraini@solusimakmur.com (completed)" width="1479"/>
+                <img src="344bca32c0bab5ad1a9a22f54a5a59d1bdf62ba95e6027ab037433b87298f021.png" title=" When I enter Email &quot;riska.dnuraini@solusimakmur.com&quot; (completed)" width="1479"/>
+                <img src="f0bd0baaaad27c27f4f3c75cb6a72bad750703219d750cc4191e15c43d6ed791.png" title=" And I enter Password &quot;Sosio@2025&quot;" width="1479"/>
+                <img src="f0bd0baaaad27c27f4f3c75cb6a72bad750703219d750cc4191e15c43d6ed791.png" title=" Input password: Sosio@2025" width="1479"/>
+                <img src="f0bd0baaaad27c27f4f3c75cb6a72bad750703219d750cc4191e15c43d6ed791.png" title=" And I enter Password &quot;Sosio@2025&quot; (completed)" width="1479"/>
+                <img src="a7731b9c66add874aef17e1d36fb05e2bef6efa882f8d5aa410a0b69b55ac5bc.png" title=" And I click Login button" width="1479"/>
+                <img src="a7731b9c66add874aef17e1d36fb05e2bef6efa882f8d5aa410a0b69b55ac5bc.png" title=" Click login button" width="1479"/>
+                <img src="a7731b9c66add874aef17e1d36fb05e2bef6efa882f8d5aa410a0b69b55ac5bc.png" title=" And I click Login button (completed)" width="1479"/>
+                <img src="3e107899a26b4ea3c88ee68f01a8035eed0ee22abebcfc123893328d2475a524.png" title=" Then I am on the dashboard page" width="1479"/>
+                <img src="d239efed5792f6aebe473f398be9709a7704dc4ba6f5c1f326477cc04fb03953.png" title=" When I click the menu stakeholder" width="1479"/>
+                <img src="d239efed5792f6aebe473f398be9709a7704dc4ba6f5c1f326477cc04fb03953.png" title=" Click menu stakeholder" width="1479"/>
+                <img src="e7be3d428ec51d35740b75a78f946b7af2e41453268369f2dd35869c09388aea.png" title=" Click menu stakeholder (completed)" width="1479"/>
+                <img src="e7be3d428ec51d35740b75a78f946b7af2e41453268369f2dd35869c09388aea.png" title=" When I click the menu stakeholder (completed)" width="1479"/>
+                <img src="19347c30cbc2fe4b64e5fbf415cd81bc76b8aad497b275726747289b35f27622.png" title=" And I click the tambah stakeholder button" width="1479"/>
+                <img src="19347c30cbc2fe4b64e5fbf415cd81bc76b8aad497b275726747289b35f27622.png" title=" Click tambah stakeholder" width="1479"/>
+                <img src="524d17c7e17a0416ecfb17c0977e2840b089eb22182e199cfeffa85aa0fa4284.png" title=" Click tambah stakeholder (completed)" width="1479"/>
+                <img src="524d17c7e17a0416ecfb17c0977e2840b089eb22182e199cfeffa85aa0fa4284.png" title=" And I click the tambah stakeholder button (completed)" width="1479"/>
+                <img src="dfeb8a6e4e3cd7dfac76e67cb6e77322df22b3b0691a4895660049db5405290e.png" title=" And I fill nama stakeholder with &quot;aruna&quot;" width="1479"/>
+                <img src="dfeb8a6e4e3cd7dfac76e67cb6e77322df22b3b0691a4895660049db5405290e.png" title=" Fill nama stakeholder: aruna" width="1479"/>
+                <img src="d18bb035ed8a54215a2920fc0dfc4730e4a7af80e32f6757d90eb95d561fb530.png" title=" Fill nama stakeholder: aruna (completed)" width="1479"/>
+                <img src="d18bb035ed8a54215a2920fc0dfc4730e4a7af80e32f6757d90eb95d561fb530.png" title=" And I fill nama stakeholder with &quot;aruna&quot; (completed)" width="1479"/>
+                <img src="a78a46d521b75d34d204a5ae1c46c3d5c139616ea0867166e242b2386f548b1c.png" title=" And I fill jabatan with &quot;Artist&quot;" width="1479"/>
+                <img src="a78a46d521b75d34d204a5ae1c46c3d5c139616ea0867166e242b2386f548b1c.png" title=" Fill jabatan: Artist" width="1479"/>
+                <img src="972a38f8eec927658446a4b0261f11f9ff5e5862cf7f23aa93a9bb7c3876a00d.png" title=" Fill jabatan: Artist (completed)" width="1479"/>
+                <img src="972a38f8eec927658446a4b0261f11f9ff5e5862cf7f23aa93a9bb7c3876a00d.png" title=" And I fill jabatan with &quot;Artist&quot; (completed)" width="1479"/>
+                <img src="c051430301d0274982b9febe0e9ae9bd31b4e24e6c6a938dcf986008914db49b.png" title=" And I select stakeholder with &quot;External&quot;" width="1479"/>
+                <img src="c051430301d0274982b9febe0e9ae9bd31b4e24e6c6a938dcf986008914db49b.png" title=" Select stakeholder: External" width="1479"/>
+                <img src="a72d439e0531381f360fc45719e654657e4d7961109b3b1059c88cc6c511d97f.png" title=" Select stakeholder: External (completed)" width="1479"/>
+                <img src="a72d439e0531381f360fc45719e654657e4d7961109b3b1059c88cc6c511d97f.png" title=" And I select stakeholder with &quot;External&quot; (completed)" width="1479"/>
+                <img src="74ed82082ee8ff09d2a67282b39a599c3d359e03bdd3a68e84aa93dea6015736.png" title=" And I select kategori stakeholder &quot;Customers&quot;" width="1479"/>
+                <img src="74ed82082ee8ff09d2a67282b39a599c3d359e03bdd3a68e84aa93dea6015736.png" title=" Select kategori stakeholder: Customers" width="1479"/>
+                <img src="7a3166b56261629814feed16a938d290e616dc459a1621fe939a205fef67a65a.png" title=" Select kategori stakeholder: Customers (completed)" width="1479"/>
+                <img src="7a3166b56261629814feed16a938d290e616dc459a1621fe939a205fef67a65a.png" title=" And I select kategori stakeholder &quot;Customers&quot; (completed)" width="1479"/>
+                <img src="56dc53d6ab0564952ecce3e775a63dae7743897de638e590614278fe8396415c.png" title=" And I select scope area &quot;Ring 2&quot;" width="1479"/>
+                <img src="56dc53d6ab0564952ecce3e775a63dae7743897de638e590614278fe8396415c.png" title=" Select scope area: Ring 2" width="1479"/>
+                <img src="7d2ccd5bf2852143b7d3b22d13eb665201f2353fb05aa75caa027ef5afd4a76f.png" title=" Select scope area: Ring 2 (completed)" width="1479"/>
+                <img src="7d2ccd5bf2852143b7d3b22d13eb665201f2353fb05aa75caa027ef5afd4a76f.png" title=" And I select scope area &quot;Ring 2&quot; (completed)" width="1479"/>
+                <img src="3f2bf53eb2a09cb3290f7d45e2f6aeeecbd03d8d9767791877ea71bd9cbd6284.png" title=" And I select kategori ring &quot;Desa Klekat&quot;" width="1479"/>
+                <img src="3f2bf53eb2a09cb3290f7d45e2f6aeeecbd03d8d9767791877ea71bd9cbd6284.png" title=" Select kategori ring: Desa Klekat" width="1479"/>
+                <img src="ec27445dae58d38ba809ab33deeb2e1084be974f2b70e65f06fd0a40922ba061.png" title=" Select kategori ring: Desa Klekat (completed)" width="1479"/>
+                <img src="ec27445dae58d38ba809ab33deeb2e1084be974f2b70e65f06fd0a40922ba061.png" title=" And I select kategori ring &quot;Desa Klekat&quot; (completed)" width="1479"/>
+                <img src="6755eea39c53369886b7424067535301512bc95f6a2210dac74ca0b1cd1f976d.png" title=" And I select coverage area &quot;Kabupaten&quot;" width="1479"/>
+                <img src="6755eea39c53369886b7424067535301512bc95f6a2210dac74ca0b1cd1f976d.png" title=" Select coverage area: Kabupaten" width="1479"/>
+                <img src="71dbd3aff9699252b4f6d7b801b28f3d5aac79427264480c482cd1881d0de405.png" title=" Select coverage area: Kabupaten (completed)" width="1479"/>
+                <img src="71dbd3aff9699252b4f6d7b801b28f3d5aac79427264480c482cd1881d0de405.png" title=" And I select coverage area &quot;Kabupaten&quot; (completed)" width="1479"/>
+                <img src="a55fb5ea04c711ce337da846649cda8adf2bef7ff157a8be4a0fdb7d8f856431.png" title=" And I click the selanjutnya button" width="1479"/>
+                <img src="a55fb5ea04c711ce337da846649cda8adf2bef7ff157a8be4a0fdb7d8f856431.png" title=" Click selanjutnya" width="1479"/>
+                <img src="e7a68b8ce96b6a394520beb7a7e576940c53b58d220362cc67a842a8d883e27b.png" title=" Click selanjutnya (completed)" width="1479"/>
+                <img src="e7a68b8ce96b6a394520beb7a7e576940c53b58d220362cc67a842a8d883e27b.png" title=" And I click the selanjutnya button (completed)" width="1479"/>
+                <img src="8f85debfc72bfe202c9509e710be71eb2edc328631370b62336cda9d2093ca99.png" title=" And I fill pekerjaan with &quot;artist&quot;" width="1479"/>
+                <img src="8f85debfc72bfe202c9509e710be71eb2edc328631370b62336cda9d2093ca99.png" title=" Fill pekerjaan: artist" width="1479"/>
+                <img src="b41ea6afc6b4dbb889fad4a6cfe55dba1bfe13b078f310295643013b94e1501c.png" title=" Fill pekerjaan: artist (completed)" width="1479"/>
+                <img src="b41ea6afc6b4dbb889fad4a6cfe55dba1bfe13b078f310295643013b94e1501c.png" title=" And I fill pekerjaan with &quot;artist&quot; (completed)" width="1479"/>
+                <img src="1d38c03d974e12d085bfb40a1cb7be69c96899a6695500e8feef185341231251.png" title=" And I fill tempat lahir with &quot;Bandung&quot;" width="1479"/>
+                <img src="1d38c03d974e12d085bfb40a1cb7be69c96899a6695500e8feef185341231251.png" title=" Fill tempat lahir: Bandung" width="1479"/>
+                <img src="058203933bde0f83f9bce04dc02e8f23470b1838fbf7f41c39679fb5a5f758fc.png" title=" Fill tempat lahir: Bandung (completed)" width="1479"/>
+                <img src="058203933bde0f83f9bce04dc02e8f23470b1838fbf7f41c39679fb5a5f758fc.png" title=" And I fill tempat lahir with &quot;Bandung&quot; (completed)" width="1479"/>
+                <img src="f4fe5e79983a1bd1b5d504907844f70ebda96d2c7e5045d11bb5d71f55db0d71.png" title=" And I select tanggal lahir with &quot;2000-11-06&quot;" width="1479"/>
+                <img src="f4fe5e79983a1bd1b5d504907844f70ebda96d2c7e5045d11bb5d71f55db0d71.png" title=" Select tanggal lahir: 2000-11-06" width="1479"/>
+                <img src="932e05b65726ed1fb25b38ac9e318fc524175b82ea2061024529b8d512ad6c0e.png" title=" Select tanggal lahir: 2000-11-06 (completed)" width="1479"/>
+                <img src="932e05b65726ed1fb25b38ac9e318fc524175b82ea2061024529b8d512ad6c0e.png" title=" And I select tanggal lahir with &quot;2000-11-06&quot; (completed)" width="1479"/>
+                <img src="3c8b5487b21135b882ca4c8dc188420bb4f9beda99b7ad00ce883dd7f6fc5926.png" title=" And I fill alamat with &quot;Bandung raya&quot;" width="1479"/>
+                <img src="3c8b5487b21135b882ca4c8dc188420bb4f9beda99b7ad00ce883dd7f6fc5926.png" title=" Fill alamat: Bandung raya" width="1479"/>
+                <img src="3f845ace750052b42edfc9aba9577e53134ef6fae21c3f4fbf8402c7034c391c.png" title=" Fill alamat: Bandung raya (completed)" width="1479"/>
+                <img src="3f845ace750052b42edfc9aba9577e53134ef6fae21c3f4fbf8402c7034c391c.png" title=" And I fill alamat with &quot;Bandung raya&quot; (completed)" width="1479"/>
+                <img src="cb34237457baab1908b3b27d25d9293a95c926f5539abcd89353c12486c4728a.png" title=" And I fill no telepon with &quot;0878791218319&quot;" width="1479"/>
+                <img src="cb34237457baab1908b3b27d25d9293a95c926f5539abcd89353c12486c4728a.png" title=" Fill no telepon: 0878791218319" width="1479"/>
+                <img src="83a8c8e162256d05ef38b527358442be44846c36b288367e81eca14cc7f34226.png" title=" Fill no telepon: 0878791218319 (completed)" width="1479"/>
+                <img src="83a8c8e162256d05ef38b527358442be44846c36b288367e81eca14cc7f34226.png" title=" And I fill no telepon with &quot;0878791218319&quot; (completed)" width="1479"/>
+                <img src="f83ac689dac0cf9f7574fb5dae4897007e98001bfc52eb221e5481805b37c89c.png" title=" And I click keluarga tab" width="1479"/>
+                <img src="f83ac689dac0cf9f7574fb5dae4897007e98001bfc52eb221e5481805b37c89c.png" title=" Click keluarga tab" width="1479"/>
+                <img src="8d2c3ea73ae376b7bd7312870e2bd5ee54078ffac63a68f893946749523b7290.png" title=" Click keluarga tab (completed)" width="1479"/>
+                <img src="8d2c3ea73ae376b7bd7312870e2bd5ee54078ffac63a68f893946749523b7290.png" title=" And I click keluarga tab (completed)" width="1479"/>
+                <img src="8ac747ce7d280abea3b305130760284f1c2c4f2f727daf685203b88752f25142.png" title=" And I fill nama pasangan &quot;sandina&quot;" width="1479"/>
+                <img src="8ac747ce7d280abea3b305130760284f1c2c4f2f727daf685203b88752f25142.png" title=" Fill nama pasangan: sandina" width="1479"/>
+                <img src="5248aac27631d6d4584629ff9767d064360ea60414cb5094cc3de8ec433574de.png" title=" Fill nama pasangan: sandina (completed)" width="1479"/>
+                <img src="5248aac27631d6d4584629ff9767d064360ea60414cb5094cc3de8ec433574de.png" title=" And I fill nama pasangan &quot;sandina&quot; (completed)" width="1479"/>
+                <img src="8308f5d5716298bf04d7a81d261ff7c75240801e7851ab32c5ff1ea06c98d348.png" title=" And I fill nama anak &quot;medina&quot;" width="1479"/>
+                <img src="8308f5d5716298bf04d7a81d261ff7c75240801e7851ab32c5ff1ea06c98d348.png" title=" Fill nama anak: medina" width="1479"/>
+                <img src="dd9a5b67d6cbd42ee3a2dfd541da1bc008e9cc8c7c6a08d42c82a8073de5a1ca.png" title=" Fill nama anak: medina (completed)" width="1479"/>
+                <img src="dd9a5b67d6cbd42ee3a2dfd541da1bc008e9cc8c7c6a08d42c82a8073de5a1ca.png" title=" And I fill nama anak &quot;medina&quot; (completed)" width="1479"/>
+                <img src="a41e64beb14fda47733a815c4544ae63cadc5e486d8095caf44aa79d50da11a7.png" title=" And I fill nama kerabat yang berpengaruh &quot;sudarsono&quot;" width="1479"/>
+                <img src="a41e64beb14fda47733a815c4544ae63cadc5e486d8095caf44aa79d50da11a7.png" title=" Fill nama kerabat berpengaruh: sudarsono" width="1479"/>
+                <img src="0119fbfcd3d4b40729dd7314bb3e4598065803ec97ebbb264cd82973413f51fc.png" title=" Fill nama kerabat berpengaruh: sudarsono (completed)" width="1479"/>
+                <img src="0119fbfcd3d4b40729dd7314bb3e4598065803ec97ebbb264cd82973413f51fc.png" title=" And I fill nama kerabat yang berpengaruh &quot;sudarsono&quot; (completed)" width="1479"/>
+                <img src="8e46396340130c0c6f30cb1c7e76324770dade39a8266d0940ecdb415bbec962.png" title=" And I click info pribadi tab" width="1479"/>
+                <img src="8e46396340130c0c6f30cb1c7e76324770dade39a8266d0940ecdb415bbec962.png" title=" Click info pribadi tab" width="1479"/>
+                <img src="e2adbf3ef3694df4740cf1b490dbb1d0806425e5b0c31e871df10540529a5d37.png" title=" Click info pribadi tab (completed)" width="1479"/>
+                <img src="e2adbf3ef3694df4740cf1b490dbb1d0806425e5b0c31e871df10540529a5d37.png" title=" And I click info pribadi tab (completed)" width="1479"/>
+                <img src="87161dd5ed0301917e115dcf3e78aa901e860968599a72bea7cbce0598279ce4.png" title=" And I fill agama &quot;islam&quot;" width="1479"/>
+                <img src="87161dd5ed0301917e115dcf3e78aa901e860968599a72bea7cbce0598279ce4.png" title=" Fill religion: islam" width="1479"/>
+                <img src="e13c0f338674b40bb237270a44652a8f63b8284d801f1bbbc7cf1078dc499c97.png" title=" Fill religion: islam (completed)" width="1479"/>
+                <img src="e13c0f338674b40bb237270a44652a8f63b8284d801f1bbbc7cf1078dc499c97.png" title=" And I fill agama &quot;islam&quot; (completed)" width="1479"/>
+                <img src="4a7059b1fd4f9bafd35cecd4f0975d254b85cb0986296d2e96124d7e2084092b.png" title=" And I fill suku &quot;jawa&quot;" width="1479"/>
+                <img src="4a7059b1fd4f9bafd35cecd4f0975d254b85cb0986296d2e96124d7e2084092b.png" title=" Fill suku: jawa" width="1479"/>
+                <img src="8287423536be9486c6dd51a4731e279046192a0b7afe1c345b46525b02b61777.png" title=" Fill suku: jawa (completed)" width="1479"/>
+                <img src="8287423536be9486c6dd51a4731e279046192a0b7afe1c345b46525b02b61777.png" title=" And I fill suku &quot;jawa&quot; (completed)" width="1479"/>
+                <img src="f997ad95b8e6d707606ec17a2fc6f9263ec8742ef1958822a6c86477980275f9.png" title=" And I fill pendidikan &quot;SMA&quot;" width="1479"/>
+                <img src="f997ad95b8e6d707606ec17a2fc6f9263ec8742ef1958822a6c86477980275f9.png" title=" Fill pendidikan: SMA" width="1479"/>
+                <img src="356f6f6f928b47a61ab9e4884e70210cf91f5f4f8e78b5c8f7f2555aa7e887a6.png" title=" Fill pendidikan: SMA (completed)" width="1479"/>
+                <img src="356f6f6f928b47a61ab9e4884e70210cf91f5f4f8e78b5c8f7f2555aa7e887a6.png" title=" And I fill pendidikan &quot;SMA&quot; (completed)" width="1479"/>
+                <img src="0a7be939c1695d5c68299b6d95aa5911413f1d3eff49f86b30c10e62a1a83157.png" title=" And I fill hobi &quot;kulineran&quot;" width="1479"/>
+                <img src="0a7be939c1695d5c68299b6d95aa5911413f1d3eff49f86b30c10e62a1a83157.png" title=" Fill hobi: kulineran" width="1479"/>
+                <img src="5afd40ea65a49da6e877ff450718c4a400e269630dbd3f56e03c0364b96c6350.png" title=" Fill hobi: kulineran (completed)" width="1479"/>
+                <img src="5afd40ea65a49da6e877ff450718c4a400e269630dbd3f56e03c0364b96c6350.png" title=" And I fill hobi &quot;kulineran&quot; (completed)" width="1479"/>
+                <img src="ff08fc8a9b6d661aa3956802c363fa895c22593aec3fca48d14d8778f4c7442d.png" title=" And I fill makanan kesukaan &quot;batagor&quot;" width="1479"/>
+                <img src="ff08fc8a9b6d661aa3956802c363fa895c22593aec3fca48d14d8778f4c7442d.png" title=" Fill makanan kesukaan: batagor" width="1479"/>
+                <img src="23b9516a2fdf4bfce3a5e318a3da1e866853bc2bc3508da897a46a5e7e2d1832.png" title=" Fill makanan kesukaan: batagor (completed)" width="1479"/>
+                <img src="23b9516a2fdf4bfce3a5e318a3da1e866853bc2bc3508da897a46a5e7e2d1832.png" title=" And I fill makanan kesukaan &quot;batagor&quot; (completed)" width="1479"/>
+                <img src="ad64d7e0a35d8837e1a441ae95a7d3e8ab705559d3a752a184a48f712e2794a7.png" title=" And I fill topik pembicaraan kesukaan &quot;religius,fashion&quot;" width="1479"/>
+                <img src="ad64d7e0a35d8837e1a441ae95a7d3e8ab705559d3a752a184a48f712e2794a7.png" title=" Fill topik pembicaraan: religius,fashion" width="1479"/>
+                <img src="623c693a1e87c6eeca01848f7797b7ba42c73e825b8da80cf0503c2600e8f8ef.png" title=" Fill topik pembicaraan: religius,fashion (completed)" width="1479"/>
+                <img src="623c693a1e87c6eeca01848f7797b7ba42c73e825b8da80cf0503c2600e8f8ef.png" title=" And I fill topik pembicaraan kesukaan &quot;religius,fashion&quot; (completed)" width="1479"/>
+                <img src="100d8fe03d63a0acff87aaba054b93bdac49c43557e60814aca24b63a70c22c9.png" title=" And I fill penyakit yang diderita &quot;TBC&quot;" width="1479"/>
+                <img src="100d8fe03d63a0acff87aaba054b93bdac49c43557e60814aca24b63a70c22c9.png" title=" Fill penyakit yang diderita: TBC" width="1479"/>
+                <img src="520f6ae7043637efc58d38402bfe77da1d831a9ba8dd5cd222d28b58b781f252.png" title=" Fill penyakit yang diderita: TBC (completed)" width="1479"/>
+                <img src="520f6ae7043637efc58d38402bfe77da1d831a9ba8dd5cd222d28b58b781f252.png" title=" And I fill penyakit yang diderita &quot;TBC&quot; (completed)" width="1479"/>
+                <img src="520f6ae7043637efc58d38402bfe77da1d831a9ba8dd5cd222d28b58b781f252.png" title=" And I click Hub dengan perusahaan tab" width="1479"/>
+                <img src="d76eb79e93ccad75f66dcbe20fcec30d2743ac630983f669af6cbac34c5b1c70.png" title=" Click hubungan perusahaan tab" width="1479"/>
+                <img src="99e9ef6439abeb247b133bdbaad6db66a929c782dd5681c80bd004a7acf9e58e.png" title=" Click hubungan perusahaan tab (completed): <span class='error-color'>ERROR</span>" width="1479"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.6.21</span>
+</div>
+</body>
+</html>

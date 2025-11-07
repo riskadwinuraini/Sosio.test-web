@@ -119,7 +119,7 @@ public class Periode extends PageObject {
         $(btnConfirmLanjutkan).click();
     }
 
-    // ✅ Tambahan otomatis klik jeda/lanjutkan berdasarkan status
+    // Tambahan otomatis klik jeda/lanjutkan berdasarkan status
     @Step("Klik tombol jeda atau lanjutkan sesuai status periode")
     public void clickJedaOrLanjutkan() {
         boolean jedaVisible = $(btnJeda).isVisible() && $(btnJeda).isEnabled();

@@ -154,7 +154,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Periode Management","type":"feature","href":"feature_periode_management.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-x-circle-fill failure-icon \u0027 title\u003d\u0027FAILURE\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e9 scenarios\u003c/span\u003e"]}];
+            var requirementsTree = [];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -225,7 +225,7 @@
             <a href="#"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 17-10-2025 15:04</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated </span>
     <br style="clear:left"/>
 </div>
 
@@ -281,679 +281,84 @@ So that I can manage periode data in the system
                                                 <h3>Feature Coverage By Scenario</h3>
 
                                                 <!-- REQUIREMENTS PIE CHART -->
-                                                    <div class="chart-container" style="position: relative; width:30vw">
-                                                        <canvas id="requirementChart" width="300" height="300"></canvas>
-                                                    </div>
 
                                             </div>
                                             <div class="col-sm-8">
-                                                <!--- TOC --->
-                                                <div id="toc">
-                                                    <h3>Overview</h3>
-                                                    <table class="table" id="toc-table">
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#4d38a0ebcb22e33fb3c59d3257e3fa7bb46e8caf58503167f2981710720ea286"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario: Add period with start and end dates already in use
-                                                                                    </a>
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
+                                                <h3>Requirements Overview</h3>
+
+                                                <div id="tree"></div>
+
+                                                <!-- STATS -->
+    <div>
+        <h3><i class="bi bi-speedometer2"></i> Key Statistics</h3>
+        <div>
+            <table class="table table-striped table-hover">
+                <tbody>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-card-checklist"></i> Number of Scenarios
+                    </td>
+                    <td>0</td>
+                </tr>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-caret-right"></i> Total Number of Test Cases
+                    </td>
+                    <td>0</td>
+                </tr>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-flag-fill"></i> Tests Started
+                    </td>
+                    <td></td>
+                </tr>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-stop-circle"></i> Tests
+                        Finished
+                    </td>
+                    <td></td>
+                </tr>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-stopwatch"></i> Total
+                        Duration
+                    </td>
+                    <td>0ms</td>
+                </tr>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-trophy"></i> Fastest Test
+                    </td>
+                    <td>0ms</td>
+                </tr>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-skip-start"></i> Slowest
+                        Test
+                    </td>
+                    <td>0ms</td>
+                </tr>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-stopwatch"></i> Average
+                        Execution Time
+                    </td>
+                    <td>0ms</td>
+                </tr>
+                <tr scope="row">
+                    <td>
+                        <i class="bi bi-stopwatch-fill"></i> Total
+                        Execution Time
+                    </td>
+                    <td>0ms</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+                                                <!-- END STATS -->
 
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="periode_management_add_period_with_start_and_end_dates_already_in_use_chrome_comma_windows.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="periode_management_add_period_with_start_and_end_dates_already_in_use_chrome_comma_windows.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#ec0861ee754da17f0592ecd906caa4a22aa6515f39900447e66921f10b2f4fb2"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario: Successfully add new periode
-                                                                                    </a>
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="periode_management_successfully_add_new_periode_chrome_comma_windows.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="periode_management_successfully_add_new_periode_chrome_comma_windows.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#ac21ff7ceb5ec34590ecbbe191f581fc5d8152b8560b67318ef02c7e24d81c10"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario: Add periode with empty data
-                                                                                    </a>
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="periode_management_add_periode_with_empty_data_chrome_comma_windows.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="periode_management_add_periode_with_empty_data_chrome_comma_windows.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#f46432a21678c7ff15fda03bd3f645f07bd1d19ddbd5b0ea355c36897f55a183"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario: Add a period with an end date earlier than the start date.
-                                                                                    </a>
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="periode_management_add_a_period_with_an_end_date_earlier_than_the_start_date._chrome_comma_windows.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="periode_management_add_a_period_with_an_end_date_earlier_than_the_start_date._chrome_comma_windows.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#45590b5ff3c638e868ca58fdaf5473c7ef2d64830c708c603a178466c0b18f37"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario: Edit/ delete button disabled for completed period
-                                                                                    </a>
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="periode_management_edit__delete_button_disabled_for_completed_period_chrome_comma_windows.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="periode_management_edit__delete_button_disabled_for_completed_period_chrome_comma_windows.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#502bfcd5ec35a84f4c681a45b005a40808b933f2c765a6785617e0fa434b8bea"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario: Change/delete a period that is in progress
-                                                                                    </a>
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="periode_management_change_delete_a_period_that_is_in_progress_chrome_comma_windows.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="periode_management_change_delete_a_period_that_is_in_progress_chrome_comma_windows.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#c7599ec18dc04e26aa3f3fafe14e694f6acb0f79d88b65e58bf3b6306fa425c0"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario: Continue a period that is paused
-                                                                                    </a>
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="periode_management_continue_a_period_that_is_paused_chrome_comma_windows.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="periode_management_continue_a_period_that_is_paused_chrome_comma_windows.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#c30734a276467b9431b884de5631d5b679e395e812e56e72c8f61e9644c5cdfd"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario: Automatically handle pause or continue based on current status
-                                                                                    </a>
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="periode_management_automatically_handle_pause_or_continue_based_on_current_status_chrome_comma_windows.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="periode_management_automatically_handle_pause_or_continue_based_on_current_status_chrome_comma_windows.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#5c36989b535d84e8759ca23127ad9f0643a01b5eeb539733686e9464650d8b62"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario: Delete periods that have not started status
-                                                                                    </a>
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="periode_management_delete_periods_that_have_not_started_status_chrome_comma_windows.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="periode_management_delete_periods_that_have_not_started_status_chrome_comma_windows.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                    </table>
-                                                </div>
-                                                <!--- END OF TOC --->
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <h3>Scenarios</h3>
-
-                                                    <a name="765f2309-c879-4ca3-a12b-51295cf82b5d"></a>
-                                                    <p class="rule-tags inline-tag">
-                                                    </p>
-                                                        <div class="scenario-docs card">
-                                                            <div class="scenario-docs card-header"
-                                                                 style="min-height:1.5em;">
-                                                                    <span class="scenario-heading">
-                                                                    Background: </span>
-                                                                </span>
-                                                            </div>
-                                                            <div class="scenario-docs card-body">
-                                                                    <p>Given I am on the login pages</p>
-                                                                    <p>When I enter Email &quot;riskadwi583@gmail.com&quot;</p>
-                                                                    <p>And I enter Password &quot;Sosio@123&quot;</p>
-                                                                    <p>And I click Login button</p>
-                                                                    <p>Then I am on the dashboard page</p>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div class="scenario-docs card" id="4d38a0ebcb22e33fb3c59d3257e3fa7bb46e8caf58503167f2981710720ea286">
-                                                            <div class="scenario-docs card-header success"
-                                                                 style="min-height:1.5em;">
-                                                                <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="periode_management_add_period_with_start_and_end_dates_already_in_use_chrome_comma_windows.html"
-                                                                               title="View test results">Scenario: Add period with start and end dates already in use</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                                <span class="badge tag-badge"
-                                                                                      style="background:default;">
-                                                                                    <i class="bi bi-tag-fill"></i>&nbsp;
-                                                                                    <a class="tagLink"
-                                                                                       style="background:default;"
-                                                                                       href="tag_addperiode.html">AddPeriode (tag)</a>
-                                                                                </span>
-                                                                        </span>
-
-                                                                    <span class="scenario-result-icon">
-                                                                    
-
-                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                                                        </span>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="scenario-docs card-body">
-                                                                    <p>When I click the menu &quot;Periode&quot;</p>
-                                                                    <p>And I click the Tambah Periode button</p>
-                                                                    <p>And I fill Nama Periode with &quot;Periode Uji Coba 2025&quot;</p>
-                                                                    <p>And I fill Tanggal Mulai with &quot;2025-01-01&quot;</p>
-                                                                    <p>And I fill Tanggal Selesai with &quot;2025-06-30&quot;</p>
-                                                                    <p>And I click the Simpan button</p>
-                                                                    <p>Then I should see a error message &quot;Tanggal mulai atau tanggal selesai sudah ada di sistem&quot;</p>
-                                                                <div class="examples">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="scenario-docs card" id="ec0861ee754da17f0592ecd906caa4a22aa6515f39900447e66921f10b2f4fb2">
-                                                            <div class="scenario-docs card-header success"
-                                                                 style="min-height:1.5em;">
-                                                                <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="periode_management_successfully_add_new_periode_chrome_comma_windows.html"
-                                                                               title="View test results">Scenario: Successfully add new periode</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                                <span class="badge tag-badge"
-                                                                                      style="background:default;">
-                                                                                    <i class="bi bi-tag-fill"></i>&nbsp;
-                                                                                    <a class="tagLink"
-                                                                                       style="background:default;"
-                                                                                       href="tag_addperiode.html">AddPeriode (tag)</a>
-                                                                                </span>
-                                                                        </span>
-
-                                                                    <span class="scenario-result-icon">
-                                                                    
-
-                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                                                        </span>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="scenario-docs card-body">
-                                                                    <p>When I click the menu &quot;Periode&quot;</p>
-                                                                    <p>And I click the Tambah Periode button</p>
-                                                                    <p>And I fill Nama Periode with &quot;Periode Uji Coba 2025&quot;</p>
-                                                                    <p>And I fill Tanggal Mulai with &quot;2029-01-01&quot;</p>
-                                                                    <p>And I fill Tanggal Selesai with &quot;2029-06-30&quot;</p>
-                                                                    <p>And I click the Simpan button</p>
-                                                                    <p>Then I should see a success message &quot;Periode berhasil ditambahkan&quot;</p>
-                                                                    <p>And the new periode &quot;Periode Uji Coba 2029&quot; should appear in the periode list</p>
-                                                                <div class="examples">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="scenario-docs card" id="ac21ff7ceb5ec34590ecbbe191f581fc5d8152b8560b67318ef02c7e24d81c10">
-                                                            <div class="scenario-docs card-header success"
-                                                                 style="min-height:1.5em;">
-                                                                <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="periode_management_add_periode_with_empty_data_chrome_comma_windows.html"
-                                                                               title="View test results">Scenario: Add periode with empty data</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                                <span class="badge tag-badge"
-                                                                                      style="background:default;">
-                                                                                    <i class="bi bi-tag-fill"></i>&nbsp;
-                                                                                    <a class="tagLink"
-                                                                                       style="background:default;"
-                                                                                       href="tag_addperiode.html">AddPeriode (tag)</a>
-                                                                                </span>
-                                                                        </span>
-
-                                                                    <span class="scenario-result-icon">
-                                                                    
-
-                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                                                        </span>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="scenario-docs card-body">
-                                                                    <p>When I click the menu &quot;Periode&quot;</p>
-                                                                    <p>And I click the Tambah Periode button</p>
-                                                                    <p>And I click the Simpan button</p>
-                                                                    <p>Then I should see a error message &quot;Nama Periode, Tanggal Mulai, dan Tanggal Selesai wajib diisi&quot;</p>
-                                                                <div class="examples">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="scenario-docs card" id="f46432a21678c7ff15fda03bd3f645f07bd1d19ddbd5b0ea355c36897f55a183">
-                                                            <div class="scenario-docs card-header success"
-                                                                 style="min-height:1.5em;">
-                                                                <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="periode_management_add_a_period_with_an_end_date_earlier_than_the_start_date._chrome_comma_windows.html"
-                                                                               title="View test results">Scenario: Add a period with an end date earlier than the start date.</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                                <span class="badge tag-badge"
-                                                                                      style="background:default;">
-                                                                                    <i class="bi bi-tag-fill"></i>&nbsp;
-                                                                                    <a class="tagLink"
-                                                                                       style="background:default;"
-                                                                                       href="tag_addperiode.html">AddPeriode (tag)</a>
-                                                                                </span>
-                                                                        </span>
-
-                                                                    <span class="scenario-result-icon">
-                                                                    
-
-                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                                                        </span>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="scenario-docs card-body">
-                                                                    <p>When I click the menu &quot;Periode&quot;</p>
-                                                                    <p>And I click the Tambah Periode button</p>
-                                                                    <p>And I fill Nama Periode with &quot;Periode Uji Coba 2025&quot;</p>
-                                                                    <p>And I fill Tanggal Mulai with &quot;2032-06-01&quot;</p>
-                                                                    <p>And I fill Tanggal Selesai with &quot;2032-01-30&quot;</p>
-                                                                    <p>And I click the Simpan button</p>
-                                                                    <p>Then I should see a success message &quot;Tanggal selesai harus berisi tanggal setelah tanggal mulai&quot;</p>
-                                                                <div class="examples">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="scenario-docs card" id="45590b5ff3c638e868ca58fdaf5473c7ef2d64830c708c603a178466c0b18f37">
-                                                            <div class="scenario-docs card-header success"
-                                                                 style="min-height:1.5em;">
-                                                                <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="periode_management_edit__delete_button_disabled_for_completed_period_chrome_comma_windows.html"
-                                                                               title="View test results">Scenario: Edit/ delete button disabled for completed period</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                                <span class="badge tag-badge"
-                                                                                      style="background:default;">
-                                                                                    <i class="bi bi-tag-fill"></i>&nbsp;
-                                                                                    <a class="tagLink"
-                                                                                       style="background:default;"
-                                                                                       href="tag_completeperiode.html">CompletePeriode (tag)</a>
-                                                                                </span>
-                                                                        </span>
-
-                                                                    <span class="scenario-result-icon">
-                                                                    
-
-                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                                                        </span>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="scenario-docs card-body">
-                                                                    <p>When I click the menu &quot;Periode&quot;</p>
-                                                                    <p>Then the Edit button in row 7 should be disabled</p>
-                                                                <div class="examples">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="scenario-docs card" id="502bfcd5ec35a84f4c681a45b005a40808b933f2c765a6785617e0fa434b8bea">
-                                                            <div class="scenario-docs card-header failure"
-                                                                 style="min-height:1.5em;">
-                                                                <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="periode_management_change_delete_a_period_that_is_in_progress_chrome_comma_windows.html"
-                                                                               title="View test results">Scenario: Change/delete a period that is in progress</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                                <span class="badge tag-badge"
-                                                                                      style="background:default;">
-                                                                                    <i class="bi bi-tag-fill"></i>&nbsp;
-                                                                                    <a class="tagLink"
-                                                                                       style="background:default;"
-                                                                                       href="tag_inprogressperiode.html">InProgressPeriode (tag)</a>
-                                                                                </span>
-                                                                        </span>
-
-                                                                    <span class="scenario-result-icon">
-                                                                    
-
-                                                                            <a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a>
-                                                                        </span>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="scenario-docs card-body">
-                                                                    <p>When I click the menu &quot;Periode&quot;</p>
-                                                                    <p>Then the action buttons in row 6 should be enabled</p>
-                                                                <div class="examples">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="scenario-docs card" id="c7599ec18dc04e26aa3f3fafe14e694f6acb0f79d88b65e58bf3b6306fa425c0">
-                                                            <div class="scenario-docs card-header failure"
-                                                                 style="min-height:1.5em;">
-                                                                <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="periode_management_continue_a_period_that_is_paused_chrome_comma_windows.html"
-                                                                               title="View test results">Scenario: Continue a period that is paused</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                                <span class="badge tag-badge"
-                                                                                      style="background:default;">
-                                                                                    <i class="bi bi-tag-fill"></i>&nbsp;
-                                                                                    <a class="tagLink"
-                                                                                       style="background:default;"
-                                                                                       href="tag_continueperiode.html">ContinuePeriode (tag)</a>
-                                                                                </span>
-                                                                        </span>
-
-                                                                    <span class="scenario-result-icon">
-                                                                    
-
-                                                                            <a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a>
-                                                                        </span>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="scenario-docs card-body">
-                                                                    <p>When I click the menu &quot;Periode&quot;</p>
-                                                                    <p>Then I click button lanjutkan periode</p>
-                                                                    <p>Then I see pop up and click button lanjutkan periode</p>
-                                                                    <p>Then I should see a success message &quot;Berhasil mengubah status pengisian&quot;</p>
-                                                                <div class="examples">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="scenario-docs card" id="c30734a276467b9431b884de5631d5b679e395e812e56e72c8f61e9644c5cdfd">
-                                                            <div class="scenario-docs card-header success"
-                                                                 style="min-height:1.5em;">
-                                                                <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="periode_management_automatically_handle_pause_or_continue_based_on_current_status_chrome_comma_windows.html"
-                                                                               title="View test results">Scenario: Automatically handle pause or continue based on current status</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                                <span class="badge tag-badge"
-                                                                                      style="background:default;">
-                                                                                    <i class="bi bi-tag-fill"></i>&nbsp;
-                                                                                    <a class="tagLink"
-                                                                                       style="background:default;"
-                                                                                       href="tag_autostatuschange.html">AutoStatusChange (tag)</a>
-                                                                                </span>
-                                                                        </span>
-
-                                                                    <span class="scenario-result-icon">
-                                                                    
-
-                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                                                        </span>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="scenario-docs card-body">
-                                                                    <p>When I click the menu &quot;Periode&quot;</p>
-                                                                    <p>Then I click button jeda or continue based on status</p>
-                                                                    <p>Then I should see a success message &quot;Berhasil mengubah status pengisian&quot;</p>
-                                                                <div class="examples">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="scenario-docs card" id="5c36989b535d84e8759ca23127ad9f0643a01b5eeb539733686e9464650d8b62">
-                                                            <div class="scenario-docs card-header success"
-                                                                 style="min-height:1.5em;">
-                                                                <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="periode_management_delete_periods_that_have_not_started_status_chrome_comma_windows.html"
-                                                                               title="View test results">Scenario: Delete periods that have not started status</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                                <span class="badge tag-badge"
-                                                                                      style="background:default;">
-                                                                                    <i class="bi bi-tag-fill"></i>&nbsp;
-                                                                                    <a class="tagLink"
-                                                                                       style="background:default;"
-                                                                                       href="tag_deleteperiode.html">deletePeriode (tag)</a>
-                                                                                </span>
-                                                                        </span>
-
-                                                                    <span class="scenario-result-icon">
-                                                                    
-
-                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                                                        </span>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="scenario-docs card-body">
-                                                                    <p>When I click the menu &quot;Periode&quot;</p>
-                                                                    <p>Then I click delete button</p>
-                                                                    <p>Then I see pop up and click delete button</p>
-                                                                    <p>Then I should see a success message &quot;Periode berhasil dihapus&quot;</p>
-                                                                <div class="examples">
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                             </div>
                                         </div>
                                     </div>
@@ -965,9 +370,6 @@ So that I can manage periode data in the system
                                             <div class="col-sm-4">
                                                 <h3>Feature Coverage By Scenario</h3>
                                                 <!-- TEST RESULT PIE CHART -->
-                                                    <div class="chart-container" style="position: relative; width:30vw">
-                                                        <canvas id="resultChart" width="300" height="300"></canvas>
-                                                    </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <h4><i class="bi bi-check-square"></i> Test Outcomes</h4>
@@ -999,22 +401,22 @@ So that I can manage periode data in the system
                     <td>
                         <i class="bi bi-card-checklist"></i> Number of Scenarios
                     </td>
-                    <td>9</td>
+                    <td>0</td>
                     <td>
                         <i class="bi bi-stopwatch"></i> Total
                         Duration
                     </td>
-                    <td> 5m 28s</td>
+                    <td>0ms</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-caret-right"></i> Total Number of Test Cases
                     </td>
-                    <td>9</td>
+                    <td>0</td>
                     <td>
                         <i class="bi bi-trophy"></i> Fastest Test
                     </td>
-                    <td>28s</td>
+                    <td>0ms</td>
                 </tr>
                 <tr scope="row">
                     <td>
@@ -1025,30 +427,30 @@ So that I can manage periode data in the system
                         <i class="bi bi-skip-start"></i> Slowest
                         Test
                     </td>
-                    <td>41s</td>
+                    <td>0ms</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-flag-fill"></i> Tests Started
                     </td>
-                    <td>Oct 17, 2025 15:04:31</td>
+                    <td></td>
                     <td>
                         <i class="bi bi-stopwatch"></i> Average
                         Execution Time
                     </td>
-                    <td>35s</td>
+                    <td>0ms</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stop-circle"></i> Tests
                         Finished
                     </td>
-                    <td>Oct 17, 2025 15:10:00</td>
+                    <td></td>
                     <td>
                         <i class="bi bi-stopwatch-fill"></i> Total
                         Execution Time
                     </td>
-                    <td> 5m 19s</td>
+                    <td>0ms</td>
                 </tr>
                 </tbody>
             </table>
@@ -1070,139 +472,139 @@ So that I can manage periode data in the system
                                                         </tr>
                                                         </thead>
                                                         <tbody>
-                                                                <tr class="scenario-result SUCCESS">
+                                                                <tr class="scenario-result UNDEFINED">
                                                                     <td>
                                                                             <a href="feature_periode_management.html">Periode Management</a>
                                                                     </td>
                                                                     <td>
-                                                                        <a href="periode_management_add_period_with_start_and_end_dates_already_in_use_chrome_comma_windows.html">Add period with start and end dates already in use</a>
+                                                                        <a href="">Add period with start and end dates already in use</a>
                                                                     </td>
-                                                                    <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-windows' title='Windows'></i></span><span style="display:none">Chrome,windows</span> </td>
+                                                                    <td><span class='context-icon'></span><span style="display:none"></span> </td>
                                                                     <td>7</td>
-                                                                    <td>15:04:31</td>
-                                                                    <td>36s 142ms</td>
-                                                                    <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
-                                                                                style="display:none">SUCCESS</span>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span
+                                                                                style="display:none">UNDEFINED</span>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="scenario-result SUCCESS">
+                                                                <tr class="scenario-result UNDEFINED">
                                                                     <td>
                                                                             <a href="feature_periode_management.html">Periode Management</a>
                                                                     </td>
                                                                     <td>
-                                                                        <a href="periode_management_successfully_add_new_periode_chrome_comma_windows.html">Successfully add new periode</a>
+                                                                        <a href="">Successfully add new periode</a>
                                                                     </td>
-                                                                    <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-windows' title='Windows'></i></span><span style="display:none">Chrome,windows</span> </td>
+                                                                    <td><span class='context-icon'></span><span style="display:none"></span> </td>
                                                                     <td>8</td>
-                                                                    <td>15:05:08</td>
-                                                                    <td>37s 236ms</td>
-                                                                    <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
-                                                                                style="display:none">SUCCESS</span>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span
+                                                                                style="display:none">UNDEFINED</span>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="scenario-result SUCCESS">
+                                                                <tr class="scenario-result UNDEFINED">
                                                                     <td>
                                                                             <a href="feature_periode_management.html">Periode Management</a>
                                                                     </td>
                                                                     <td>
-                                                                        <a href="periode_management_add_periode_with_empty_data_chrome_comma_windows.html">Add periode with empty data</a>
+                                                                        <a href="">Add periode with empty data</a>
                                                                     </td>
-                                                                    <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-windows' title='Windows'></i></span><span style="display:none">Chrome,windows</span> </td>
+                                                                    <td><span class='context-icon'></span><span style="display:none"></span> </td>
                                                                     <td>4</td>
-                                                                    <td>15:05:46</td>
-                                                                    <td>33s 554ms</td>
-                                                                    <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
-                                                                                style="display:none">SUCCESS</span>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span
+                                                                                style="display:none">UNDEFINED</span>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="scenario-result SUCCESS">
+                                                                <tr class="scenario-result UNDEFINED">
                                                                     <td>
                                                                             <a href="feature_periode_management.html">Periode Management</a>
                                                                     </td>
                                                                     <td>
-                                                                        <a href="periode_management_add_a_period_with_an_end_date_earlier_than_the_start_date._chrome_comma_windows.html">Add a period with an end date earlier than the start date.</a>
+                                                                        <a href="">Add a period with an end date earlier than the start date.</a>
                                                                     </td>
-                                                                    <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-windows' title='Windows'></i></span><span style="display:none">Chrome,windows</span> </td>
+                                                                    <td><span class='context-icon'></span><span style="display:none"></span> </td>
                                                                     <td>7</td>
-                                                                    <td>15:06:22</td>
-                                                                    <td>38s 621ms</td>
-                                                                    <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
-                                                                                style="display:none">SUCCESS</span>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span
+                                                                                style="display:none">UNDEFINED</span>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="scenario-result SUCCESS">
+                                                                <tr class="scenario-result UNDEFINED">
                                                                     <td>
                                                                             <a href="feature_periode_management.html">Periode Management</a>
                                                                     </td>
                                                                     <td>
-                                                                        <a href="periode_management_edit__delete_button_disabled_for_completed_period_chrome_comma_windows.html">Edit/ delete button disabled for completed period</a>
+                                                                        <a href="">Edit/ delete button disabled for completed period</a>
                                                                     </td>
-                                                                    <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-windows' title='Windows'></i></span><span style="display:none">Chrome,windows</span> </td>
+                                                                    <td><span class='context-icon'></span><span style="display:none"></span> </td>
                                                                     <td>2</td>
-                                                                    <td>15:07:02</td>
-                                                                    <td>31s 244ms</td>
-                                                                    <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
-                                                                                style="display:none">SUCCESS</span>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span
+                                                                                style="display:none">UNDEFINED</span>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="scenario-result FAILURE">
+                                                                <tr class="scenario-result UNDEFINED">
                                                                     <td>
                                                                             <a href="feature_periode_management.html">Periode Management</a>
                                                                     </td>
                                                                     <td>
-                                                                        <a href="periode_management_change_delete_a_period_that_is_in_progress_chrome_comma_windows.html">Change/delete a period that is in progress</a>
+                                                                        <a href="">Change/delete a period that is in progress</a>
                                                                     </td>
-                                                                    <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-windows' title='Windows'></i></span><span style="display:none">Chrome,windows</span> </td>
+                                                                    <td><span class='context-icon'></span><span style="display:none"></span> </td>
                                                                     <td>2</td>
-                                                                    <td>15:07:34</td>
-                                                                    <td>28s 794ms</td>
-                                                                    <td><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a> <span
-                                                                                style="display:none">FAILURE</span>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span
+                                                                                style="display:none">UNDEFINED</span>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="scenario-result FAILURE">
+                                                                <tr class="scenario-result UNDEFINED">
                                                                     <td>
                                                                             <a href="feature_periode_management.html">Periode Management</a>
                                                                     </td>
                                                                     <td>
-                                                                        <a href="periode_management_continue_a_period_that_is_paused_chrome_comma_windows.html">Continue a period that is paused</a>
+                                                                        <a href="">Continue a period that is paused</a>
                                                                     </td>
-                                                                    <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-windows' title='Windows'></i></span><span style="display:none">Chrome,windows</span> </td>
+                                                                    <td><span class='context-icon'></span><span style="display:none"></span> </td>
                                                                     <td>4</td>
-                                                                    <td>15:08:03</td>
-                                                                    <td>35s 759ms</td>
-                                                                    <td><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a> <span
-                                                                                style="display:none">FAILURE</span>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span
+                                                                                style="display:none">UNDEFINED</span>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="scenario-result SUCCESS">
+                                                                <tr class="scenario-result UNDEFINED">
                                                                     <td>
                                                                             <a href="feature_periode_management.html">Periode Management</a>
                                                                     </td>
                                                                     <td>
-                                                                        <a href="periode_management_automatically_handle_pause_or_continue_based_on_current_status_chrome_comma_windows.html">Automatically handle pause or continue based on current status</a>
+                                                                        <a href="">Automatically handle pause or continue based on current status</a>
                                                                     </td>
-                                                                    <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-windows' title='Windows'></i></span><span style="display:none">Chrome,windows</span> </td>
+                                                                    <td><span class='context-icon'></span><span style="display:none"></span> </td>
                                                                     <td>3</td>
-                                                                    <td>15:08:40</td>
-                                                                    <td>41s 796ms</td>
-                                                                    <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
-                                                                                style="display:none">SUCCESS</span>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span
+                                                                                style="display:none">UNDEFINED</span>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="scenario-result SUCCESS">
+                                                                <tr class="scenario-result UNDEFINED">
                                                                     <td>
                                                                             <a href="feature_periode_management.html">Periode Management</a>
                                                                     </td>
                                                                     <td>
-                                                                        <a href="periode_management_delete_periods_that_have_not_started_status_chrome_comma_windows.html">Delete periods that have not started status</a>
+                                                                        <a href="">Delete periods that have not started status</a>
                                                                     </td>
-                                                                    <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-windows' title='Windows'></i></span><span style="display:none">Chrome,windows</span> </td>
+                                                                    <td><span class='context-icon'></span><span style="display:none"></span> </td>
                                                                     <td>4</td>
-                                                                    <td>15:09:23</td>
-                                                                    <td>36s 302ms</td>
-                                                                    <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
-                                                                                style="display:none">SUCCESS</span>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span
+                                                                                style="display:none">UNDEFINED</span>
                                                                     </td>
                                                                 </tr>
                                                         </tbody>
@@ -1220,69 +622,6 @@ So that I can manage periode data in the system
                                             </div>
                                         </div>
 
-        <div class="row">
-            <div class="col-sm-12">
-                <h3>Tags</h3>
-                    <div class="card">
-                        <div class="card-body">
-                            <div>
-                                    <a href="tag_completeperiode.html">
-                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Complete Periode&nbsp;&nbsp;&nbsp;1
-                                    </span>
-                                    </a>
-                                    <a href="tag_inprogressperiode.html">
-                                    <span class="tag-badge badge" style="background-color:#fd938e; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> In Progress Periode&nbsp;&nbsp;&nbsp;1
-                                    </span>
-                                    </a>
-                                    <a href="tag_addperiode.html">
-                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Add Periode&nbsp;&nbsp;&nbsp;4
-                                    </span>
-                                    </a>
-                                    <a href="tag_continueperiode.html">
-                                    <span class="tag-badge badge" style="background-color:#fd938e; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Continue Periode&nbsp;&nbsp;&nbsp;1
-                                    </span>
-                                    </a>
-                                    <a href="tag_deleteperiode.html">
-                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Delete Periode&nbsp;&nbsp;&nbsp;1
-                                    </span>
-                                    </a>
-                                    <a href="tag_autostatuschange.html">
-                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Auto Status Change&nbsp;&nbsp;&nbsp;1
-                                    </span>
-                                    </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                                <h5 class="card-title">Context</h5>
-                            <div>
-                                    <a href="context_chrome.html">
-                                    <span class="tag-badge badge" style="background-color:#fd938e; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Chrome&nbsp;&nbsp;&nbsp;9
-                                    </span>
-                                    </a>
-                                    <a href="context_windows.html">
-                                    <span class="tag-badge badge" style="background-color:#fd938e; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Windows&nbsp;&nbsp;&nbsp;9
-                                    </span>
-                                    </a>
-                                    <a href="context_chrome_c__windows.html">
-                                    <span class="tag-badge badge" style="background-color:#fd938e; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Chrome, Windows&nbsp;&nbsp;&nbsp;9
-                                    </span>
-                                    </a>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1323,7 +662,7 @@ So that I can manage periode data in the system
             datasets: [{
                 label: 'Test Results',
                 fill: false,
-                data: [{meta: 'Passing tests', value: 7}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 2}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
+                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
                 backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                 borderWidth: 1,
@@ -1374,7 +713,7 @@ So that I can manage periode data in the system
                         ctx.font = fontSize + "em sans-serif";
                         ctx.textBaseline = "middle";
 
-                        var text = "78%"
+                        var text = " "
                         textX = 10 + Math.round((width - ctx.measureText(text).width) / 2);
                         textY = (height / 2) - 40;
 
@@ -1418,7 +757,7 @@ So that I can manage periode data in the system
             datasets: [{
                 label: 'Feature Coverage',
                 fill: false,
-                data: [{meta: 'Passing tests', value: 7}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 2}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
+                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
                 backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                 borderWidth: 1,
@@ -1469,7 +808,7 @@ So that I can manage periode data in the system
                         ctx.font = fontSize + "em sans-serif";
                         ctx.textBaseline = "middle";
 
-                        var text = "78%"
+                        var text = " "
                         textX = 10 + Math.round((width - ctx.measureText(text).width) / 2);
                         textY = (height / 2) - 40;
 
@@ -1514,7 +853,7 @@ So that I can manage periode data in the system
             datasets: [
                 {
                     label: 'Automated',
-                    data: [7,0,0,0,0,2,0,0],
+                    data: [0,0,0,0,0,0,0,0],
                     backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                     borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                     borderWidth: 1
@@ -1597,7 +936,7 @@ So that I can manage periode data in the system
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['0','0','1','8','0','0','0','0'],
+                data: ['0','0','0','0','0','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]

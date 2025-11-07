@@ -3,8 +3,10 @@ starter\StepDefinitions\LogoutSteps.class
 starter\StepDefinitions\ProfileSteps.class
 starter\Sosio\Dashboard.class
 starter\Sosio\Logout.class
+starter\Sosio\Stakeholder.class
 starter\StepDefinitions\AuthSteps.class
 starter\Sosio\Login.class
+starter\StepDefinitions\StakeholderSteps.class
 starter\CucumberTestSuite.class
 starter\Sosio\Periode.class
 starter\StepDefinitions\PeriodeSteps.class

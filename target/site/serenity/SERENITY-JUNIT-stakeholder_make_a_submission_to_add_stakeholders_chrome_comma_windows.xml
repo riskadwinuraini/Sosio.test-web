@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Stakeholder" skipped="0" tests="1" time="64.53" timestamp="2025-11-06 03:44:10"><testcase name="make a submission to add stakeholders"><error message="element click intercepted: Element &lt;a id=&quot;wizard3-t-4&quot; href=&quot;#wizard3-h-4&quot; aria-controls=&quot;wizard3-p-4&quot;&gt;...&lt;/a&gt; is not clickable at point (910, 19). Other element would receive the click: &lt;li class=&quot;dropdown main-profile-menu nav nav-item nav-link&quot;&gt;...&lt;/li&gt;&#10;  (Session info: chrome=142.0.7444.59)&#10;Build info: version: '4.8.1', revision: '8ebccac989'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [40dd50c09bd17550bf1d6c127a70e91f, clickElement {id=f.21527BF0E2DA551384A88EF364E60F33.d.D68E54FE2784CA54F43368AB6DAB832E.e.288}]&#10;Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 142.0.7444.59, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\Riska\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52839}, goog:processID: 6660, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52839/devtoo..., se:cdpVersion: 142.0.7444.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (40dd50c09bd17550bf1d6c127a70e91f)] -&gt; xpath: //a[contains(.,'Hub. Dengan Perusahaan')]]&#10;Session ID: 40dd50c09bd17550bf1d6c127a70e91f" type="org.openqa.selenium.ElementClickInterceptedException">element click intercepted: Element &lt;a id="wizard3-t-4" href="#wizard3-h-4" aria-controls="wizard3-p-4"&gt;...&lt;/a&gt; is not clickable at point (910, 19). Other element would receive the click: &lt;li class="dropdown main-profile-menu nav nav-item nav-link"&gt;...&lt;/li&gt;
+  (Session info: chrome=142.0.7444.59)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [40dd50c09bd17550bf1d6c127a70e91f, clickElement {id=f.21527BF0E2DA551384A88EF364E60F33.d.D68E54FE2784CA54F43368AB6DAB832E.e.288}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 142.0.7444.59, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\Riska\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52839}, goog:processID: 6660, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52839/devtoo..., se:cdpVersion: 142.0.7444.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (40dd50c09bd17550bf1d6c127a70e91f)] -&gt; xpath: //a[contains(.,'Hub. Dengan Perusahaan')]]
+Session ID: 40dd50c09bd17550bf1d6c127a70e91f</error><system-err>element click intercepted: Element &lt;a id="wizard3-t-4" href="#wizard3-h-4" aria-controls="wizard3-p-4"&gt;...&lt;/a&gt; is not clickable at point (910, 19). Other element would receive the click: &lt;li class="dropdown main-profile-menu nav nav-item nav-link"&gt;...&lt;/li&gt;
+  (Session info: chrome=142.0.7444.59)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [40dd50c09bd17550bf1d6c127a70e91f, clickElement {id=f.21527BF0E2DA551384A88EF364E60F33.d.D68E54FE2784CA54F43368AB6DAB832E.e.288}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 142.0.7444.59, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\Riska\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52839}, goog:processID: 6660, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52839/devtoo..., se:cdpVersion: 142.0.7444.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (40dd50c09bd17550bf1d6c127a70e91f)] -&gt; xpath: //a[contains(.,'Hub. Dengan Perusahaan')]]
+Session ID: 40dd50c09bd17550bf1d6c127a70e91f&#13;
+WebTesting@1.0-SNAPSHOT/starter.Sosio.Stakeholder.clickHubunganPerusahaanTab(Stakeholder.java:244)&#13;
+WebTesting@1.0-SNAPSHOT/starter.StepDefinitions.StakeholderSteps.clickHubunganPerusahaanTab(StakeholderSteps.java:165)&#13;
+io.cucumber.java.Invoker.doInvoke(Invoker.java:66)&#13;
+io.cucumber.java.Invoker.invoke(Invoker.java:24)&#13;
+io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)&#13;
+io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)&#13;
+io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)&#13;
+io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)&#13;
+io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)&#13;
+io.cucumber.core.runner.TestStep.run(TestStep.java:56)&#13;
+io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)&#13;
+io.cucumber.core.runner.TestCase.run(TestCase.java:84)&#13;
+io.cucumber.core.runner.Runner.runPickle(Runner.java:75)&#13;
+io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)&#13;
+io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)&#13;
+io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)&#13;
+io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)&#13;
+io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:330)&#13;
+io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:51)&#13;
+</system-err></testcase></testsuite>
